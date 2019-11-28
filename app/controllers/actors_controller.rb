@@ -11,7 +11,7 @@ class ActorsController < ApplicationController
         params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url, :death_date, :death_place)
     end
 
-    def envio
+    def create
         @actor=Actor.new(actor_params)
         if @actor.save
             redirect_to actors_path
