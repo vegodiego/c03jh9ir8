@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
         @actors=Actor.all
     end
 
-    def form
+    def new
         @actor=Actor.new
     end
 
